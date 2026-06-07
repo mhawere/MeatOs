@@ -3,46 +3,71 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meat Processing & Wholesale Platform Prototype</title>
+    <title>MeatOS UI Model Map</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="app">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Traceability prototype</p>
-          <h1>Meat Processing & Wholesale Platform</h1>
+    <main class="landing">
+      <section class="landing-head">
+        <p class="eyebrow">MeatOS UI model</p>
+        <h1>Individual screen prototype</h1>
+        <p>This version splits the prototype into separate static HTML pages so the data model can be understood from the UI point of view.</p>
+      </section>
+      <section class="grid cards"><article class="card">
+    <h2>Admin UI</h2>
+    <p>12 individual screens</p>
+    <a class="btn primary" href="admin/dashboard.html">Open area</a>
+  </article><article class="card">
+    <h2>Manager UI</h2>
+    <p>11 individual screens</p>
+    <a class="btn primary" href="manager/dashboard.html">Open area</a>
+  </article><article class="card">
+    <h2>Kiosk / Operations</h2>
+    <p>7 individual screens</p>
+    <a class="btn primary" href="kiosk/login.html">Open area</a>
+  </article><article class="card">
+    <h2>Driver UI</h2>
+    <p>6 individual screens</p>
+    <a class="btn primary" href="driver/dashboard.html">Open area</a>
+  </article><article class="card">
+    <h2>Wholesale Portal</h2>
+    <p>10 individual screens</p>
+    <a class="btn primary" href="wholesale/dashboard.html">Open area</a>
+  </article><article class="card">
+    <h2>Retail Shopfront</h2>
+    <p>7 individual screens</p>
+    <a class="btn primary" href="shopfront/home.html">Open area</a>
+  </article></section>
+      <section class="panel flow-panel">
+        <h2>Core traceability flow</h2>
+        <div class="flow-list">
+          <span>Stock Intake Batch</span>
+          <span>Output Batch</span>
+          <span>Pack Label</span>
+          <span>Delivery Note</span>
+          <span>Invoice</span>
+          <span>Customer</span>
         </div>
-        <nav class="role-switcher" aria-label="Role switcher"></nav>
-      </header>
-
-      <div class="workspace">
-        <aside class="sidebar">
-          <div class="role-card">
-            <span class="role-label">Current area</span>
-            <strong id="currentRole">Admin UI</strong>
-          </div>
-          <nav id="screenNav" class="screen-nav" aria-label="Area navigation"></nav>
-        </aside>
-
-        <main class="content">
-          <section class="page-head">
-            <div>
-              <p id="pageKicker" class="eyebrow">Admin UI</p>
-              <h2 id="pageTitle">Dashboard</h2>
-            </div>
-            <div id="scalePanel" class="scale-panel" hidden>
-              <span>Weight: <strong id="scaleWeight">0.000 kg</strong></span>
-              <span>Tare: <strong>0.000 kg</strong></span>
-            </div>
-          </section>
-
-          <section id="notice" class="notice" aria-live="polite" hidden></section>
-          <section id="appRoot" class="app-root"></section>
-        </main>
-      </div>
-    </div>
-
-    <script src="app.js"></script>
+      </section>
+      <section class="screen-map"><section class="panel">
+    <h2>Admin UI</h2>
+    <div class="link-grid"><a href="admin/dashboard.html">Dashboard</a><a href="admin/users-roles.html">Users &amp; Roles</a><a href="admin/products.html">Products</a><a href="admin/categories-attributes.html">Categories &amp; Attributes</a><a href="admin/suppliers.html">Suppliers</a><a href="admin/customers.html">Customers</a><a href="admin/pricing.html">Pricing</a><a href="admin/label-templates.html">Label Templates</a><a href="admin/vat-settings.html">VAT &amp; Settings</a><a href="admin/hardware-stations.html">Hardware / Stations</a><a href="admin/audit-log.html">Audit Log</a><a href="admin/reports.html">Reports</a></div>
+  </section><section class="panel">
+    <h2>Manager UI</h2>
+    <div class="link-grid"><a href="manager/dashboard.html">Dashboard</a><a href="manager/orders.html">Orders</a><a href="manager/production.html">Production</a><a href="manager/stock-intake.html">Stock Intake</a><a href="manager/batch-balance.html">Batch Balance</a><a href="manager/reconcile-batch.html">Reconcile Batch</a><a href="manager/customers.html">Customers</a><a href="manager/invoices.html">Invoices</a><a href="manager/credit-notes.html">Credit Notes</a><a href="manager/reports.html">Reports</a><a href="manager/audit-log.html">Audit Log</a></div>
+  </section><section class="panel">
+    <h2>Kiosk / Operations</h2>
+    <div class="link-grid"><a href="kiosk/login.html">Login</a><a href="kiosk/home.html">Home</a><a href="kiosk/add-stock.html">Add Stock</a><a href="kiosk/orders.html">Orders</a><a href="kiosk/production.html">Production</a><a href="kiosk/reprint-label.html">Reprint Label</a><a href="kiosk/pack-labels.html">Pack Labels</a></div>
+  </section><section class="panel">
+    <h2>Driver UI</h2>
+    <div class="link-grid"><a href="driver/dashboard.html">Dashboard</a><a href="driver/todays-deliveries.html">Today's Deliveries</a><a href="driver/delivery-detail.html">Delivery Detail</a><a href="driver/view-delivery-note.html">View Delivery Note</a><a href="driver/completed-deliveries.html">Completed Deliveries</a><a href="driver/failed-deliveries.html">Failed Deliveries</a></div>
+  </section><section class="panel">
+    <h2>Wholesale Portal</h2>
+    <div class="link-grid"><a href="wholesale/dashboard.html">Dashboard</a><a href="wholesale/place-order.html">Place Order</a><a href="wholesale/quick-reorder.html">Quick Reorder</a><a href="wholesale/my-orders.html">My Orders</a><a href="wholesale/delivery-notes.html">Delivery Notes</a><a href="wholesale/invoices.html">Invoices</a><a href="wholesale/statements.html">Statements</a><a href="wholesale/branches.html">Branches</a><a href="wholesale/branch-users.html">Branch Users</a><a href="wholesale/account.html">Account</a></div>
+  </section><section class="panel">
+    <h2>Retail Shopfront</h2>
+    <div class="link-grid"><a href="shopfront/home.html">Home</a><a href="shopfront/shop.html">Shop</a><a href="shopfront/product-detail.html">Product Detail</a><a href="shopfront/cart.html">Cart</a><a href="shopfront/checkout.html">Checkout</a><a href="shopfront/my-account.html">My Account</a><a href="shopfront/order-history.html">Order History</a></div>
+  </section></section>
+    </main>
   </body>
 </html>

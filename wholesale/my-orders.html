@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Orders - Wholesale Portal - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="wholesale" data-screen="My Orders">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="active" href="dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Wholesale Portal</strong></div>
+        <nav class="screen-nav" aria-label="Wholesale Portal navigation"><a class="" href="dashboard.html">Dashboard</a><a class="" href="place-order.html">Place Order</a><a class="" href="quick-reorder.html">Quick Reorder</a><a class="active" href="my-orders.html">My Orders</a><a class="" href="delivery-notes.html">Delivery Notes</a><a class="" href="invoices.html">Invoices</a><a class="" href="statements.html">Statements</a><a class="" href="branches.html">Branches</a><a class="" href="branch-users.html">Branch Users</a><a class="" href="account.html">Account</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Wholesale Portal</p>
+            <h1>My Orders</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">customer_order</span><span class="pill">order_line</span><span class="pill">customer_branch</span></div></section>
+        <div class="table-wrap"><table><thead><tr><th>Order No.</th><th>Customer</th><th>Branch</th><th>Type</th><th>Channel</th><th>Status</th><th>Due</th><th>Action</th></tr></thead><tbody><tr><td>ORD-00124</td><td>ABC Butchers</td><td>Dublin 7</td><td>Wholesale</td><td>Wholesale Portal</td><td><span class="status NEW">NEW</span></td><td>2026-06-07 14:00</td><td><button class="btn">View</button></td></tr><tr><td>ORD-00125</td><td>Curry House Central</td><td>Main Kitchen</td><td>Wholesale</td><td>Phone</td><td><span class="status IN_PROGRESS">IN_PROGRESS</span></td><td>2026-06-07 16:00</td><td><button class="btn">View</button></td></tr><tr><td>WEB-00418</td><td>Retail Customer</td><td>Online</td><td>Retail</td><td>Shopfront</td><td><span class="status NEW">NEW</span></td><td>2026-06-08 10:00</td><td><button class="btn">View</button></td></tr></tbody></table></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

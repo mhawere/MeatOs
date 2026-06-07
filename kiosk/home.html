@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Kiosk / Operations - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="kiosk" data-screen="Home">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="active" href="login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Kiosk / Operations</strong></div>
+        <nav class="screen-nav" aria-label="Kiosk / Operations navigation"><a class="" href="login.html">Login</a><a class="active" href="home.html">Home</a><a class="" href="add-stock.html">Add Stock</a><a class="" href="orders.html">Orders</a><a class="" href="production.html">Production</a><a class="" href="reprint-label.html">Reprint Label</a><a class="" href="pack-labels.html">Pack Labels</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Kiosk / Operations</p>
+            <h1>Home</h1>
+          </div>
+          <div class="scale-panel"><span>Weight: <strong id="scaleWeight">0.000 kg</strong></span><span>Tare: <strong>0.000 kg</strong></span></div>
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">stock_intake_batch</span><span class="pill">customer_order</span><span class="pill">production_run</span><span class="pill">pack_label</span></div></section>
+        <div class="kiosk-buttons"><a class="kiosk-tile" href="add-stock.html">Add Stock</a><a class="kiosk-tile" href="orders.html">Orders</a><a class="kiosk-tile" href="production.html">Production</a><a class="kiosk-tile" href="reprint-label.html">Reprint Label</a></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

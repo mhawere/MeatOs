@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - Driver UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="driver" data-screen="Dashboard">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="active" href="dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Driver UI</strong></div>
+        <nav class="screen-nav" aria-label="Driver UI navigation"><a class="active" href="dashboard.html">Dashboard</a><a class="" href="todays-deliveries.html">Today's Deliveries</a><a class="" href="delivery-detail.html">Delivery Detail</a><a class="" href="view-delivery-note.html">View Delivery Note</a><a class="" href="completed-deliveries.html">Completed Deliveries</a><a class="" href="failed-deliveries.html">Failed Deliveries</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Driver UI</p>
+            <h1>Dashboard</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">delivery_note</span><span class="pill">customer_order</span><span class="pill">driver_assignment</span></div></section>
+        <div class="grid cards"><article class="card metric"><span class="muted">Assigned today</span><strong>2</strong><span class="small">Routes ready</span></article><article class="card metric"><span class="muted">Delivered</span><strong>0</strong><span class="small">Completed</span></article><article class="card metric"><span class="muted">Failed</span><strong>0</strong><span class="small">Needs office review</span></article></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Production - Kiosk / Operations - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="kiosk" data-screen="Production">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="active" href="login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Kiosk / Operations</strong></div>
+        <nav class="screen-nav" aria-label="Kiosk / Operations navigation"><a class="" href="login.html">Login</a><a class="" href="home.html">Home</a><a class="" href="add-stock.html">Add Stock</a><a class="" href="orders.html">Orders</a><a class="active" href="production.html">Production</a><a class="" href="reprint-label.html">Reprint Label</a><a class="" href="pack-labels.html">Pack Labels</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Kiosk / Operations</p>
+            <h1>Production</h1>
+          </div>
+          <div class="scale-panel"><span>Weight: <strong id="scaleWeight">0.000 kg</strong></span><span>Tare: <strong>0.000 kg</strong></span></div>
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">production_run</span><span class="pill">output_batch</span><span class="pill">output_batch_source</span><span class="pill">pack_label</span></div></section>
+        <div class="grid two-col"><section class="form-panel"><h2>Production Flow</h2><div class="form-grid"><label>Product<select><option>Beef Diced</option><option>Chicken 65 Cut</option></select></label><label>Target weight kg<input value="1.000"></label><label>Tolerance kg<input value="0.050"></label><label>Tray weight kg<input id="prodWeight" value="1.000"></label><label class="full">Source batches<div class="batch-list"><button class="batch-row " data-batch="BEEF-B001"><strong>BEEF-B001 - Beef Topside</strong>Supplier A Meats | Use-by 2026-06-14 | 22.000 kg remaining | Ireland</button><button class="batch-row " data-batch="BEEF-B004"><strong>BEEF-B004 - Beef Chuck</strong>Supplier B Foods | Use-by 2026-06-15 | 18.000 kg remaining | United Kingdom</button></div></label></div><button class="btn primary">Create Output Batch</button><button class="btn success" id="printProductionLabel">Print Tray Label</button></section><section class="label-preview"><h2>Beef Diced</h2><p><strong>PRODUCTION</strong> | Wholesale Catchweight</p><p>Weight: <strong>1.000 kg</strong><br>Use-by: <strong>2026-06-14</strong></p><p>No price printed</p><p class="small">Source: BEEF-B001 | Supplier A Meats | EC-IE-1124 | Ireland</p><span class="barcode"></span><span class="barcode-text">Generated at print</span></section></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

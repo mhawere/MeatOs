@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audit Log - Admin UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="admin" data-screen="Audit Log">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="active" href="dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Admin UI</strong></div>
+        <nav class="screen-nav" aria-label="Admin UI navigation"><a class="" href="dashboard.html">Dashboard</a><a class="" href="users-roles.html">Users &amp; Roles</a><a class="" href="products.html">Products</a><a class="" href="categories-attributes.html">Categories &amp; Attributes</a><a class="" href="suppliers.html">Suppliers</a><a class="" href="customers.html">Customers</a><a class="" href="pricing.html">Pricing</a><a class="" href="label-templates.html">Label Templates</a><a class="" href="vat-settings.html">VAT &amp; Settings</a><a class="" href="hardware-stations.html">Hardware / Stations</a><a class="active" href="audit-log.html">Audit Log</a><a class="" href="reports.html">Reports</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Admin UI</p>
+            <h1>Audit Log</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">audit_log</span><span class="pill">user</span></div></section>
+        <div class="table-wrap"><table><thead><tr><th>Time</th><th>User</th><th>Action</th><th>Entity</th><th>Note</th></tr></thead><tbody><tr><td>2026-06-07 09:45</td><td>operator1</td><td>LABEL_PRINTED</td><td>pack_label</td><td>PL-WHO-000002 created</td></tr><tr><td>2026-06-07 10:05</td><td>manager</td><td>STOCK_ADJUSTED</td><td>stock_intake_batch</td><td>BEEF-B001 trimming loss 1.000 kg</td></tr><tr><td>2026-06-07 10:20</td><td>operator1</td><td>LABEL_REPRINTED</td><td>pack_label</td><td>PL-PRO-000003 reprint count increased</td></tr></tbody></table></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

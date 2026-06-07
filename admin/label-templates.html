@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Label Templates - Admin UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="admin" data-screen="Label Templates">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="active" href="dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Admin UI</strong></div>
+        <nav class="screen-nav" aria-label="Admin UI navigation"><a class="" href="dashboard.html">Dashboard</a><a class="" href="users-roles.html">Users &amp; Roles</a><a class="" href="products.html">Products</a><a class="" href="categories-attributes.html">Categories &amp; Attributes</a><a class="" href="suppliers.html">Suppliers</a><a class="" href="customers.html">Customers</a><a class="" href="pricing.html">Pricing</a><a class="active" href="label-templates.html">Label Templates</a><a class="" href="vat-settings.html">VAT &amp; Settings</a><a class="" href="hardware-stations.html">Hardware / Stations</a><a class="" href="audit-log.html">Audit Log</a><a class="" href="reports.html">Reports</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Admin UI</p>
+            <h1>Label Templates</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">label_group</span><span class="pill">label_template</span><span class="pill">label_element</span><span class="pill">label_association</span><span class="pill">pack_label</span></div></section>
+        <div class="grid two-col"><section><div class="table-wrap"><table><thead><tr><th>Template</th><th>Channel</th><th>Stock Size</th><th>Elements</th></tr></thead><tbody><tr><td>Retail Priced</td><td>RETAIL</td><td>80 x 60 mm</td><td>Product, weight, price, use-by, barcode, allergens</td></tr><tr><td>Wholesale Catchweight</td><td>WHOLESALE</td><td>100 x 75 mm</td><td>Product, weight, use-by, supplier EC, barcode</td></tr><tr><td>Production Bulk</td><td>PRODUCTION</td><td>100 x 75 mm</td><td>Output batch, source batches, use-by, barcode</td></tr></tbody></table></div></section><section class="label-preview"><h2>Beef Diced</h2><p><strong>WHOLESALE</strong> | Wholesale Catchweight</p><p>Weight: <strong>2.450 kg</strong><br>Use-by: <strong>2026-06-14</strong></p><p>No price printed</p><p class="small">Source: BEEF-B001 | Supplier A Meats | EC-IE-1124 | Ireland</p><span class="barcode"></span><span class="barcode-text">PL-WHO-000002</span></section></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

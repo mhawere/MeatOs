@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - Manager UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="manager" data-screen="Dashboard">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="active" href="dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Manager UI</strong></div>
+        <nav class="screen-nav" aria-label="Manager UI navigation"><a class="active" href="dashboard.html">Dashboard</a><a class="" href="orders.html">Orders</a><a class="" href="production.html">Production</a><a class="" href="stock-intake.html">Stock Intake</a><a class="" href="batch-balance.html">Batch Balance</a><a class="" href="reconcile-batch.html">Reconcile Batch</a><a class="" href="customers.html">Customers</a><a class="" href="invoices.html">Invoices</a><a class="" href="credit-notes.html">Credit Notes</a><a class="" href="reports.html">Reports</a><a class="" href="audit-log.html">Audit Log</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Manager UI</p>
+            <h1>Dashboard</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">customer_order</span><span class="pill">stock_intake_batch</span><span class="pill">batch_adjustment</span><span class="pill">invoice</span></div></section>
+        <div class="grid cards"><article class="card metric"><span class="muted">New orders</span><strong>2</strong><span class="small">Awaiting floor action</span></article><article class="card metric"><span class="muted">Orders being packed</span><strong>1</strong><span class="small">Live work</span></article><article class="card metric"><span class="muted">Batches available</span><strong>6</strong><span class="small">OPEN only</span></article><article class="card metric"><span class="muted">Batches on hold</span><strong>1</strong><span class="small">Needs review</span></article><article class="card metric"><span class="muted">Credit warnings</span><strong>1</strong><span class="small">Near limit</span></article><article class="card metric"><span class="muted">Dispatches today</span><strong>2</strong><span class="small">Assigned routes</span></article></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

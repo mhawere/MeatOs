@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Batch Balance - Manager UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="manager" data-screen="Batch Balance">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="active" href="dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Manager UI</strong></div>
+        <nav class="screen-nav" aria-label="Manager UI navigation"><a class="" href="dashboard.html">Dashboard</a><a class="" href="orders.html">Orders</a><a class="" href="production.html">Production</a><a class="" href="stock-intake.html">Stock Intake</a><a class="active" href="batch-balance.html">Batch Balance</a><a class="" href="reconcile-batch.html">Reconcile Batch</a><a class="" href="customers.html">Customers</a><a class="" href="invoices.html">Invoices</a><a class="" href="credit-notes.html">Credit Notes</a><a class="" href="reports.html">Reports</a><a class="" href="audit-log.html">Audit Log</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Manager UI</p>
+            <h1>Batch Balance</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">stock_intake_batch</span><span class="pill">batch_adjustment</span></div></section>
+        <div class="table-wrap"><table><thead><tr><th>Batch</th><th>Product</th><th>Supplier</th><th>Use-by</th><th>Received kg</th><th>Used kg</th><th>Waste kg</th><th>Remaining kg</th><th>Status</th></tr></thead><tbody><tr><td>BEEF-B001</td><td>Beef Topside</td><td>Supplier A Meats</td><td>2026-06-14</td><td>40.000 kg</td><td>16.000 kg</td><td>2.000 kg</td><td>22.000 kg</td><td><span class="status OPEN">OPEN</span></td></tr><tr><td>BEEF-B004</td><td>Beef Chuck</td><td>Supplier B Foods</td><td>2026-06-15</td><td>31.000 kg</td><td>12.000 kg</td><td>1.000 kg</td><td>18.000 kg</td><td><span class="status OPEN">OPEN</span></td></tr><tr><td>BEEF-H009</td><td>Beef Diced</td><td>Supplier A Meats</td><td>2026-06-11</td><td>20.000 kg</td><td>0.000 kg</td><td>0.000 kg</td><td>20.000 kg</td><td><span class="status HOLD">HOLD</span></td></tr><tr><td>CHIK-C017</td><td>Chicken 65 Cut</td><td>Supplier B Foods</td><td>2026-06-12</td><td>34.000 kg</td><td>10.000 kg</td><td>0.500 kg</td><td>23.500 kg</td><td><span class="status OPEN">OPEN</span></td></tr><tr><td>CHIK-C021</td><td>Chicken Legs Curry Cut</td><td>Supplier B Foods</td><td>2026-06-13</td><td>45.000 kg</td><td>22.000 kg</td><td>1.000 kg</td><td>22.000 kg</td><td><span class="status OPEN">OPEN</span></td></tr><tr><td>LAMB-L014</td><td>Lamb Curry Cut</td><td>Supplier A Meats</td><td>2026-06-16</td><td>25.000 kg</td><td>6.000 kg</td><td>0.500 kg</td><td>18.500 kg</td><td><span class="status OPEN">OPEN</span></td></tr><tr><td>FISH-F003</td><td>Fish Steaks</td><td>Fresh Coast Fish</td><td>2026-06-09</td><td>18.000 kg</td><td>4.000 kg</td><td>0.000 kg</td><td>14.000 kg</td><td><span class="status OPEN">OPEN</span></td></tr></tbody></table></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

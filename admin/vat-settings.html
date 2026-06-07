@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VAT &amp; Settings - Admin UI - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="admin" data-screen="VAT &amp; Settings">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="active" href="dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Admin UI</strong></div>
+        <nav class="screen-nav" aria-label="Admin UI navigation"><a class="" href="dashboard.html">Dashboard</a><a class="" href="users-roles.html">Users &amp; Roles</a><a class="" href="products.html">Products</a><a class="" href="categories-attributes.html">Categories &amp; Attributes</a><a class="" href="suppliers.html">Suppliers</a><a class="" href="customers.html">Customers</a><a class="" href="pricing.html">Pricing</a><a class="" href="label-templates.html">Label Templates</a><a class="active" href="vat-settings.html">VAT &amp; Settings</a><a class="" href="hardware-stations.html">Hardware / Stations</a><a class="" href="audit-log.html">Audit Log</a><a class="" href="reports.html">Reports</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Admin UI</p>
+            <h1>VAT &amp; Settings</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">vat_rate</span><span class="pill">setting</span></div></section>
+        <div class="grid two-col"><section class="panel"><h2>VAT Bands</h2><div class="table-wrap"><table><thead><tr><th>Name</th><th>Rate</th><th>Applied To</th></tr></thead><tbody><tr><td>Zero Rated</td><td>0%</td><td>Fresh meat and fish</td></tr><tr><td>Standard</td><td>23%</td><td>Future prepared goods</td></tr><tr><td>Reduced</td><td>13.5%</td><td>Future services</td></tr></tbody></table></div></section><section class="panel"><h2>Settings</h2><div class="table-wrap"><table><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Establishment EC number</td><td>EC-IE-9988</td></tr><tr><td>Use-by gate</td><td>Required before print</td></tr><tr><td>Warehouse bins</td><td>Not used</td></tr><tr><td>Default label language</td><td>English</td></tr></tbody></table></div></section></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

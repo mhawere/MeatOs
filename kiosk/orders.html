@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orders - Kiosk / Operations - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="kiosk" data-screen="Orders">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="active" href="login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="" href="../wholesale/dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Kiosk / Operations</strong></div>
+        <nav class="screen-nav" aria-label="Kiosk / Operations navigation"><a class="" href="login.html">Login</a><a class="" href="home.html">Home</a><a class="" href="add-stock.html">Add Stock</a><a class="active" href="orders.html">Orders</a><a class="" href="production.html">Production</a><a class="" href="reprint-label.html">Reprint Label</a><a class="" href="pack-labels.html">Pack Labels</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Kiosk / Operations</p>
+            <h1>Orders</h1>
+          </div>
+          <div class="scale-panel"><span>Weight: <strong id="scaleWeight">0.000 kg</strong></span><span>Tare: <strong>0.000 kg</strong></span></div>
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">customer_order</span><span class="pill">order_line</span><span class="pill">stock_intake_batch</span><span class="pill">output_batch</span><span class="pill">output_batch_source</span><span class="pill">pack_label</span><span class="pill">delivery_note</span></div></section>
+        <div class="kiosk-flow">
+    <section class="stack">
+      <section class="panel"><h2>Open Order Queue</h2><div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Lines</th><th>Status</th><th>Open</th></tr></thead><tbody><tr><td>ORD-00124</td><td>ABC Butchers</td><td>1</td><td><span class="status NEW">NEW</span></td><td><button class="btn primary">Open</button></td></tr><tr><td>ORD-00125</td><td>Curry House Central</td><td>2</td><td><span class="status IN_PROGRESS">IN_PROGRESS</span></td><td><button class="btn">Open</button></td></tr><tr><td>WEB-00418</td><td>Retail Customer</td><td>2</td><td><span class="status NEW">NEW</span></td><td><button class="btn">Open</button></td></tr></tbody></table></div></section>
+      <section class="panel"><h2>Selected Order Line</h2><button class="touch-row active"><span><strong>Beef Diced</strong>Required 12.000 kg - Packed 0.000 kg</span><span class="status OPEN">OPEN</span></button></section>
+      <section class="panel"><h2>Matching OPEN Batches Only</h2><p class="screen-note">For Beef Diced, this list shows only OPEN beef batches. Chicken, lamb and fish batches are hidden unless Manager/Admin override is recorded with a reason.</p><div class="batch-list"><button class="batch-row active" data-batch="BEEF-B001"><strong>BEEF-B001 - Beef Topside</strong>Supplier A Meats | Use-by 2026-06-14 | 22.000 kg remaining | Ireland</button><button class="batch-row " data-batch="BEEF-B004"><strong>BEEF-B004 - Beef Chuck</strong>Supplier B Foods | Use-by 2026-06-15 | 18.000 kg remaining | United Kingdom</button></div><div class="split-actions"><button class="btn primary">Confirm Batch</button><button class="btn warning" id="managerOverride">Manager Override</button><button class="btn" id="fastIntake">Fast Intake</button></div></section>
+    </section>
+    <aside class="panel active-order"><h2>Label Preview</h2><section class="label-preview"><h2>Beef Diced</h2><p><strong>WHOLESALE</strong> | Wholesale Catchweight</p><p>Weight: <strong>2.450 kg</strong><br>Use-by: <strong>2026-06-14</strong></p><p>No price printed</p><p class="small">Source: BEEF-B001 | Supplier A Meats | EC-IE-1124 | Ireland</p><span class="barcode"></span><span class="barcode-text">Generated at print</span></section><label>Actual weight kg<input id="fulfilWeight" value="2.450"></label><button class="btn success" id="printLabel">Print Label</button><p class="small">Print gate checks product, source batch, supplier, supplier batch ref, EC number, use-by, weight and origin.</p></aside>
+  </div>
+  <section class="panel"><h2>Latest pack_label records</h2><div class="table-wrap" id="createdLabels"><table><thead><tr><th>Barcode</th><th>Product</th><th>Channel</th><th>Weight</th><th>Use-by</th><th>Template</th><th>Reprints</th></tr></thead><tbody><tr><td>PL-WHO-000002</td><td>Beef Diced</td><td>WHOLESALE</td><td>2.450 kg</td><td>2026-06-14</td><td>Wholesale Catchweight</td><td>0</td></tr></tbody></table></div></section>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

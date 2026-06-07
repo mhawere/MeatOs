@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Place Order - Wholesale Portal - MeatOS</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-role="wholesale" data-screen="Place Order">
+    <header class="topbar">
+      <a class="brand" href="../index.html">
+        <span class="eyebrow">MeatOS UI model</span>
+        <strong>Meat Processing & Wholesale Platform</strong>
+      </a>
+      <nav class="role-switcher" aria-label="Role switcher"><a class="" href="../admin/dashboard.html">Admin UI</a><a class="" href="../manager/dashboard.html">Manager UI</a><a class="" href="../kiosk/login.html">Kiosk / Operations</a><a class="" href="../driver/dashboard.html">Driver UI</a><a class="active" href="dashboard.html">Wholesale Portal</a><a class="" href="../shopfront/home.html">Retail Shopfront</a></nav>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="role-card"><span class="role-label">Current area</span><strong>Wholesale Portal</strong></div>
+        <nav class="screen-nav" aria-label="Wholesale Portal navigation"><a class="" href="dashboard.html">Dashboard</a><a class="active" href="place-order.html">Place Order</a><a class="" href="quick-reorder.html">Quick Reorder</a><a class="" href="my-orders.html">My Orders</a><a class="" href="delivery-notes.html">Delivery Notes</a><a class="" href="invoices.html">Invoices</a><a class="" href="statements.html">Statements</a><a class="" href="branches.html">Branches</a><a class="" href="branch-users.html">Branch Users</a><a class="" href="account.html">Account</a></nav>
+      </aside>
+      <main class="content">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">Wholesale Portal</p>
+            <h1>Place Order</h1>
+          </div>
+          
+        </section>
+        <section id="notice" class="notice" aria-live="polite" hidden></section>
+        <section class="model-strip"><h3>Model touchpoints</h3><div class="pill-list"><span class="pill">customer_order</span><span class="pill">order_line</span><span class="pill">customer_price</span><span class="pill">product</span></div></section>
+        <p class="screen-note">Pricing uses customer price where available, otherwise default product price.</p><div class="table-wrap"><table><thead><tr><th>Product</th><th>Cut / Variant</th><th>Price</th><th>Qty</th><th>Notes</th><th>Add</th></tr></thead><tbody><tr><td>Beef Diced</td><td>Diced, Fresh</td><td>EUR 9.95</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Beef Topside</td><td>Whole cut</td><td>EUR 12.40</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Beef Chuck</td><td>Bone-out</td><td>EUR 9.75</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Chicken 65 Cut</td><td>65 cut, Marinated</td><td>EUR 7.20</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Chicken Legs Curry Cut</td><td>Curry cut</td><td>EUR 5.80</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Lamb Curry Cut</td><td>Curry cut</td><td>EUR 11.60</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr><tr><td>Fish Steaks</td><td>Steaks</td><td>EUR 13.50</td><td><input value="1.000"></td><td><input value=""></td><td><button class="btn">Add</button></td></tr></tbody></table></div>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>

@@ -1,43 +1,51 @@
-# Meat Processing & Wholesale Platform UI Prototype
+# MeatOS UI Prototype
 
-This is a static frontend prototype built with plain HTML, CSS and vanilla JavaScript.
+This version is split into individual static HTML pages so the platform can be reviewed from the UI and data-model point of view.
 
 ## How to open
 
-Open `index.html` in a browser. No install step, server, database or build tool is required.
+Open `index.html` in a browser. It is a UI map with links into each area.
 
-## Screens included
+No install step, server, database or framework is required.
 
-- Admin UI: dashboard, users and roles, products, categories and attributes, suppliers, customers, pricing, label templates, VAT/settings, hardware/stations, audit log and reports.
-- Manager UI: dashboard, order monitor, production, stock intake overview, batch balance, reconcile batch, customers, invoices, credit notes, reports and audit log.
-- Kiosk / Operations UI: login, home, add stock, order fulfilment, fast intake during fulfilment, production label printing, reprint label and pack label record view.
-- Driver UI: dashboard, today's deliveries, delivery detail, delivery note, delivered and failed delivery states.
-- Wholesale Customer Portal: dashboard, place order, quick reorder, orders, delivery notes, invoices, statements, branches, branch users and account.
-- Retail Shopfront: home, shop, product detail, cart, checkout, account and order history.
+## Folder structure
 
-## Where mock data lives
+- `admin/` - Admin configuration screens.
+- `manager/` - Operational control and exception screens.
+- `kiosk/` - Touch-first operations screens.
+- `driver/` - Delivery workflow screens.
+- `wholesale/` - Wholesale customer portal screens.
+- `shopfront/` - Retail ecommerce screens.
+- `styles.css` - Shared visual system.
+- `app.js` - Small shared JavaScript for prototype interactions.
 
-All mock data is in `app.js` in the `mock` object. It includes products, categories, suppliers, stock intake batches, output batches, customers, customer prices, orders, delivery notes, invoices, pack labels, audit entries and driver deliveries.
+## What changed from the single-page prototype
 
-## Rules implemented
+The original prototype rendered every screen from one JavaScript app. This version creates one HTML file per screen, for example:
 
-- Goods-in creates a Stock Intake Batch with lite batch balance fields: received, used, waste and remaining kilograms.
-- Output Batch is represented as the bridge from intake source batches to finished pack labels.
-- Kiosk fulfilment filters source batches to OPEN batches in the selected product category. For example, Beef Diced only shows OPEN beef batches.
-- Manager override requires a reason and writes an audit entry.
-- Label printing is blocked unless required traceability fields are present.
-- Every simulated print creates a `pack_label` mock record with actual weight, use-by, barcode, template, printed by and printed at.
-- Fulfilment label printing also updates the mock delivery note and reduces the source batch balance.
-- Fast intake during fulfilment creates a minimum OPEN Stock Intake Batch before printing.
-- Reprinting uses the original `pack_label`, keeps the same weight, use-by and barcode, and increments `reprint_count`.
-- Wholesale portal visibility demonstrates head office versus branch user scope.
-- Wholesale pricing uses customer price where available, otherwise default product price.
-- Retail product detail shows catchweight messaging and allergen information where relevant.
+- `admin/products.html`
+- `manager/batch-balance.html`
+- `kiosk/orders.html`
+- `wholesale/place-order.html`
+- `shopfront/product-detail.html`
+
+Each screen includes a "Model touchpoints" strip showing which data-model entities that UI touches.
+
+## Rules represented
+
+- Goods-in creates a `stock_intake_batch` with lite batch balance fields.
+- Kiosk fulfilment shows only OPEN source batches that match the order product category.
+- Beef Diced shows beef batches only.
+- Output Batch remains the bridge from raw material to finished packed product.
+- Printing a label creates a `pack_label` mock record.
+- Reprinting keeps the original barcode, weight and use-by and increments `reprint_count`.
+- Fast intake during fulfilment is represented before label printing.
+- Wholesale branch visibility and customer price fallback are represented.
+- Retail catchweight messaging is shown on product and cart screens.
 
 ## Not implemented yet
 
-- No backend, database, authentication or printer integration.
-- No real scale integration.
-- No warehouse bins, advanced stock reservation engine or complex inventory locations.
-- No payment processor integration.
-- Reports are on-screen mock views only; export to PDF or Excel is left for a later build.
+- No backend, database, authentication, printer or scale integration.
+- No warehouse bins or complex inventory locations.
+- No payment processor.
+- Reports are static UI views only.
