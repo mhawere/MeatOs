@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meat Processing & Wholesale Platform Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Traceability prototype</p>
+          <h1>Meat Processing & Wholesale Platform</h1>
+        </div>
+        <nav class="role-switcher" aria-label="Role switcher"></nav>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar">
+          <div class="role-card">
+            <span class="role-label">Current area</span>
+            <strong id="currentRole">Admin UI</strong>
+          </div>
+          <nav id="screenNav" class="screen-nav" aria-label="Area navigation"></nav>
+        </aside>
+
+        <main class="content">
+          <section class="page-head">
+            <div>
+              <p id="pageKicker" class="eyebrow">Admin UI</p>
+              <h2 id="pageTitle">Dashboard</h2>
+            </div>
+            <div id="scalePanel" class="scale-panel" hidden>
+              <span>Weight: <strong id="scaleWeight">0.000 kg</strong></span>
+              <span>Tare: <strong>0.000 kg</strong></span>
+            </div>
+          </section>
+
+          <section id="notice" class="notice" aria-live="polite" hidden></section>
+          <section id="appRoot" class="app-root"></section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
